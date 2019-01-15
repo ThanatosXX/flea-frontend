@@ -1,0 +1,5 @@
+.tabbar{
+  position: absolute;
+  bottom: 0;
+  width: 750rpx;
+}

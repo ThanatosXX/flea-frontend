@@ -1,1 +1,8 @@
-{}
+{
+  "usingComponents": {
+    "i-tab-bar": "../../dist/tab-bar/index",
+    "i-tab-bar-item": "../../dist/tab-bar-item/index",
+    "home": "/component/home/home",
+    "friend": "/component/friend/friend"
+  }
+}
