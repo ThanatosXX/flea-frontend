@@ -1,44 +1,44 @@
 {
-  "pages": [
-    "pages/home/home",
-    "pages/messgage/messgage",
-    "pages/category/category",
-    "pages/my/my"
-  ],
-  "window": {
-    "backgroundTextStyle": "light",
-    "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "跳蚤市场",
-    "navigationBarTextStyle": "black"
-  },
-  "tabBar": {
-    "list": [
-      {
-        "pagePath": "pages/home/home",
-        "text": "首页",
-        "iconPath": "/image/icon/home.png",
-        "selectedIconPath": "/image/icon/home_fill.png"
-      },
-      {
-        "pagePath": "pages/category/category",
-        "text": "分类",
-        "iconPath": "/image/icon/category.png",
-        "selectedIconPath": "/image/icon/category_fill.png"
-      },
-      {
-        "pagePath": "pages/messgage/messgage",
-        "text": "消息",
-        "iconPath": "/image/icon/message.png",
-        "selectedIconPath": "/image/icon/message_fill.png"
-      },
-      {
-        "pagePath": "pages/my/my",
-        "text": "我的",
-        "iconPath": "/image/icon/my.png",
-        "selectedIconPath": "/image/icon/my_fill.png"
-      }
+    "pages": [
+        "pages/home/home",
+        "pages/messgage/messgage",
+        "pages/category/category",
+        "pages/my/my"
     ],
-    "color":"#cccccc",
-    "selectedColor": "#E6A23C"
-  }
+    "window": {
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#E6A23C",
+        "navigationBarTitleText": "跳蚤市场",
+        "navigationBarTextStyle": "white"
+    },
+    "tabBar": {
+        "list": [
+            {
+                "pagePath": "pages/home/home",
+                "text": "首页",
+                "iconPath": "/image/icon/home.png",
+                "selectedIconPath": "/image/icon/home_fill.png"
+            },
+            {
+                "pagePath": "pages/category/category",
+                "text": "分类",
+                "iconPath": "/image/icon/category.png",
+                "selectedIconPath": "/image/icon/category_fill.png"
+            },
+            {
+                "pagePath": "pages/messgage/messgage",
+                "text": "消息",
+                "iconPath": "/image/icon/message.png",
+                "selectedIconPath": "/image/icon/message_fill.png"
+            },
+            {
+                "pagePath": "pages/my/my",
+                "text": "我的",
+                "iconPath": "/image/icon/my.png",
+                "selectedIconPath": "/image/icon/my_fill.png"
+            }
+        ],
+        "color": "#E6A23C",
+        "selectedColor": "#E6A23C"
+    }
 }
