@@ -1,6 +1,7 @@
 /* pages/category/category.wxss */
 page{
   font-size: 30rpx;
+  /* background-color: white */
 }
 .categorySidebar{
   display: inline-block;

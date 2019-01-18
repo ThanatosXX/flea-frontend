@@ -10,6 +10,7 @@
   </swiper>
 </view>
 <view class='container'>
+  <i-panel title="{{ firstLevelColumn[nowItem].name }}">
   <view class='good_item'>
     <i-card title="商品标题" thumb="https://i.loli.net/2017/08/21/599a521472424.jpg">
       <view slot="content">内容不错内容不错内容不错内容不错内容不错内容不错</view>
@@ -22,4 +23,5 @@
       <view slot="footer" style='color:red'>￥999.99</view>
     </i-card>
   </view>
+  </i-panel>
 </view>
