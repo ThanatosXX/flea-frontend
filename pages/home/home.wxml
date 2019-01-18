@@ -1,2 +1,54 @@
-<!--pages/home/home.wxml-->
-<text>pages/home/home.wxml</text>
+<view class='container'>
+    <view class='cards-container'>
+        <block wx:for='{{goods_list}}' wx:key='index'>
+            <view class='card-row'>
+                <view class='card-col'>
+                    <view class='card'>
+                        <view class='card-img'></view>
+                        <view class='card-message'>
+                            <view class='goods-details'>
+                                <view class='goods-title'>
+                                    <view>这是一个商品这是一个商品</view>
+                                </view>
+                                <view class='goods-price'>
+                                    <view>￥1000</view>
+                                </view>
+                            </view>
+                            <view class='user-details'>
+                                <view class='user-avater'>
+                                    <image src='/image/icon/my.png'></image>
+                                </view>
+                                <view class='user-name'>
+                                    <view>这里是用户名</view>
+                                </view>
+                            </view>
+                        </view>
+                    </view>
+                </view>
+                <view class='card-col'>
+                    <view class='card'>
+                        <view class='card-img'></view>
+                        <view class='card-message'>
+                            <view class='goods-details'>
+                                <view class='goods-title'>
+                                    <view>这是一个商品这是一个商品</view>
+                                </view>
+                                <view class='goods-price'>
+                                    <view>￥1000</view>
+                                </view>
+                            </view>
+                            <view class='user-details'>
+                                <view class='user-avater'>
+                                    <image src='/image/icon/my.png'></image>
+                                </view>
+                                <view class='user-name'>
+                                    <view>这里是用户名</view>
+                                </view>
+                            </view>
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </block>
+    </view>
+</view>
