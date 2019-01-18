@@ -1,2 +1,25 @@
 <!--pages/category/category.wxml-->
-<text>pages/category/category.wxml</text>
+<view class='categorySidebar'>
+  <swiper interval vertical display-multiple-items="{{maxItems}}" class='sidebarSwiper'>
+      <swiper-item wx:for="{{ firstLevelColumn }}" wx:key="{{item.cid}}" class="categorySidebarItem {{item.cid == nowItem? 'selectedItem':''}}" data-id="{{ item.cid }}" bindtap="categorySidebarItemClick">
+        <view class='categorySidebarItemText'>
+        <view class='indicator' wx:if="{{ item.cid == nowItem}}"></view>
+          {{ item.name }}
+        </view>
+      </swiper-item>
+  </swiper>
+</view>
+<view class='container'>
+  <view class='good_item'>
+    <i-card title="商品标题" thumb="https://i.loli.net/2017/08/21/599a521472424.jpg">
+      <view slot="content">内容不错内容不错内容不错内容不错内容不错内容不错</view>
+      <view slot="footer" style='color:red'>￥999.99</view>
+    </i-card>
+  </view>
+  <view class='good_item'>
+    <i-card title="商品标题" thumb="https://i.loli.net/2017/08/21/599a521472424.jpg">
+      <view slot="content">这是一个商品这是一个商品这是一个商品这是一个商品这是一个商品</view>
+      <view slot="footer" style='color:red'>￥999.99</view>
+    </i-card>
+  </view>
+</view>

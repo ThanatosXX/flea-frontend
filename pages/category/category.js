@@ -5,42 +5,52 @@ Page({
    * 页面的初始数据
    */
   data: {
+    "firstLevelColumn": [
+      { "cid": 0, "name": "分类1" },
+      { "cid": 1, "name": "分类2" },
+      { "cid": 2, "name": "分类3" },
+      { "cid": 3, "name": "分类4" },
+      { "cid": 4, "name": "分类5" },
+      { "cid": 5, "name": "分类6" },
+      { "cid": 6, "name": "分类7" },
+      { "cid": 7, "name": "分类8" },
+      { "cid": 8, "name": "分类9" },
+      { "cid": 9, "name": "分类10" },
+      { "cid": 10, "name": "分类11" },
+      { "cid": 11, "name": "分类12" },
+      { "cid": 12, "name": "分类13" },
+    ],
+    "maxItems":10,
+    "nowItem":0,
+    "selected":true,
+    "imgUrls":[
+
+    ],
 
   },
 
-  /**
-   * 生命周期函数--监听页面加载
-   */
   onLoad: function (options) {
-
+      // 获取一级分类栏目,成功后根据items数目修改sidebar最大显示数
+      // wx.request({
+      //   url: '',
+      // })
   },
 
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
   onShow: function () {
 
   },
 
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
+  categorySidebarItemClick:function(e){
+    this.setData({
+      "nowItem": e.currentTarget.dataset.id
+    })
   },
 
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
+  getGoods:function(firstLevelColumn){
+    // 获取一级分类下的物品列表
+    // wx.request({
+    //   url: '',
+    // })
   },
 
   /**

@@ -1,1 +1,49 @@
 /* pages/category/category.wxss */
+page{
+  font-size: 30rpx;
+}
+.categorySidebar{
+  display: inline-block;
+  width: 150rpx;
+  background-color: #eee;
+}
+.sidebarSwiper{
+  height: 100vh;
+}
+.categorySidebarItem{
+  display: flex;
+  align-items: center;
+  justify-content: center;  
+}
+.categorySidebarItemText{
+  width: 100%;
+  text-align: center;
+  position: relative
+}
+.indicator{
+  width: 7%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  background-color: #E6A23C;
+}
+.selectedItem{
+  background-color: white;
+  font-weight: bold
+}
+
+.container{
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 600rpx;
+}
+.good_item{
+  width: 100%;
+  position: relative;
+  padding: 20rpx 0
+}
+.i-card-header-content{
+  font-size: 30rpx;
+}

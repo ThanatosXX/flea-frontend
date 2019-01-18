@@ -1,10 +1,12 @@
 {
-    "pages": [
-        "pages/home/home",
-        "pages/messgage/messgage",
-        "pages/category/category",
-        "pages/my/my"
-    ],
+
+  "pages": [
+    "pages/category/category",
+    "pages/home/home",
+    "pages/messgage/messgage",
+    "pages/my/my"
+  ],
+    
     "window": {
         "backgroundTextStyle": "light",
         "navigationBarBackgroundColor": "#E6A23C",
