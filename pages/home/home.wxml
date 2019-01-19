@@ -1,10 +1,12 @@
-<view class='container'>
+<scroll-view class='container'>
     <view class='cards-container'>
         <block wx:for='{{goods_list}}' wx:key='index'>
             <view class='card-row'>
                 <view class='card-col'>
                     <view class='card'>
-                        <view class='card-img'></view>
+                        <view class='card-img'>
+                            <image src='/image/timg.jpg'></image>
+                        </view>
                         <view class='card-message'>
                             <view class='goods-details'>
                                 <view class='goods-title'>
@@ -27,7 +29,9 @@
                 </view>
                 <view class='card-col'>
                     <view class='card'>
-                        <view class='card-img'></view>
+                        <view class='card-img'>
+                            <image src='/image/peiqi.jpg'></image>
+                        </view>
                         <view class='card-message'>
                             <view class='goods-details'>
                                 <view class='goods-title'>
@@ -51,4 +55,4 @@
             </view>
         </block>
     </view>
-</view>
+</scroll-view>
