@@ -1,2 +1,44 @@
 <!--pages/my/my.wxml-->
-<text>pages/my/my.wxml</text>
+<view wx:if="{{ showAuthorizeButton }}">
+  <text style='font-size:24rpx'>您还未允许我们获取您的用户信息，请点击以下按钮确认授权以获得更好的使用体验！</text>
+  <button open-type="getUserInfo" bindgetuserinfo='onGotUserInfo'>确认授权</button>
+</view>
+
+<view wx:else>
+  <view class='head'>
+    <view class='userAvatar'>
+      <image src='{{ userInfo.avatarUrl }}' class='userAvatarImg'></image>
+    </view>
+    <view class='userOption published' data-href="published"  bindtap='goto'>
+      <image src='/image/icon/published.png' class='optionImg'></image>
+      <image src='/image/icon/published_font.png' class='optionText'></image>
+    </view>
+    <view class='userOption trading' data-href="trading"  bindtap='goto'>
+      <image src='/image/icon/trading.png' class='optionImg' style='height:45%'></image>
+      <image src='/image/icon/trading_font.png' class='optionText'></image>
+    </view>
+    <view class='userOption sold' data-href="sold"  bindtap='goto'>
+      <image src='/image/icon/sold.png' class='optionImg'></image>
+      <image src='/image/icon/sold_font.png' class='optionText'></image>
+
+    </view>
+    <view class='userOption received' data-href="received"  bindtap='goto'>
+      <image src='/image/icon/received.png' class='optionImg' style='height:45%'></image>
+      <image src='/image/icon/received_font.png' class='optionText'></image>
+
+    </view>
+  </view>
+  <view class='userItem '>
+    <image src='/image/my_rec.png' class='userItemImg'></image>
+  </view>
+  <view class='userItem '>
+    <image src='/image/my_rec.png' class='userItemImg'></image>
+  </view>
+  <view class='userItem '>
+    <image src='/image/my_rec.png' class='userItemImg'></image>
+  </view>
+  <view class='userItem '>
+    <image src='/image/my_rec.png' class='userItemImg'></image>
+  </view>
+</view>
+

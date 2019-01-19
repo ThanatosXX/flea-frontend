@@ -1,10 +1,14 @@
 {
 
   "pages": [
+    "pages/my/my",
+    "pages/my/published/published",
+    "pages/my/received/received",
+    "pages/my/sold/sold",
+    "pages/my/trading/trading",
     "pages/category/category",
     "pages/home/home",
-    "pages/messgage/messgage",
-    "pages/my/my"
+    "pages/messgage/messgage"
   ],
     
     "window": {
