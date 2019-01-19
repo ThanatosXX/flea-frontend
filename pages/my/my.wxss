@@ -3,7 +3,7 @@
 .head{
   width: 750rpx;
   height: 500rpx;
-  background-color: rgb(230, 128, 60);
+  background-color: #E6A23C;
   position: relative;
   padding-top: 80rpx;
 }
