@@ -36,7 +36,7 @@ page {
     display: flex;
     align-items: stretch;
     width: 100%;
-    min-height: 230px;
+    height: 230px;
     margin-top: 20px;
 }
 
