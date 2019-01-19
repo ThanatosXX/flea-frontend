@@ -1,2 +1,15 @@
-<!--pages/messgage/messgage.wxml-->
-<text>pages/messgage/messgage.wxml</text>
+<scroll-view scroll-y class='container'>
+    <block wx:for='{{message_list}}' wx:key='index'>
+        <view class='message-row' bindtap='click'>
+             <i-swipeout actions="{{actions}}" toggle="{{toggle}}">
+                <view slot="content">
+                    <i-cell 
+                        i-class="i-cell-padding" 
+                        title="猛虫过江" 
+                        label="侏罗纪世界主题😀公园及豪华度假村被失控的恐龙们摧毁已有四年">
+                    </i-cell>
+                </view>
+            </i-swipeout>
+        </view>
+    </block>
+</scroll-view>

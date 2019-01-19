@@ -1,1 +1,7 @@
-{}
+{
+    "usingComponents": {
+        "i-swipeout": "/dist/swipeout/index",
+        "i-cell": "/dist/cell/index",
+        "i-load-more": "/dist/load-more/index"
+    }
+}
