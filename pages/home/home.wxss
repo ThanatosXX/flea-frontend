@@ -60,8 +60,15 @@ page {
 }
 
 .card-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     flex: 65;
-    background-color: #c5c8ce;
+    overflow: hidden;
+}
+.card-img>image{
+    max-width: 100%;
+    max-height: 100%;
 }
 
 .card-message {
