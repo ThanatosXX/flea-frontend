@@ -12,6 +12,34 @@ Page({
   },
 
   goto:function(e){
+    const animation = wx.createAnimation({
+      duration: 150,
+      timingFunction: 'linear',
+    })
+
+    this.animation = animation
+
+    animation.scale(1.2, 1.2).step().scale(0.9, 0.9).step().scale(1, 1).step()
+
+    switch (e.currentTarget.dataset.href) {
+      case "published":
+        this.setData({
+          animationData1: animation.export()
+        }); break;
+      case "trading":
+        this.setData({
+          animationData2: animation.export()
+        }); break;
+      case "sold":
+        this.setData({
+          animationData3: animation.export()
+        }); break;
+      case "received":
+        this.setData({
+          animationData4: animation.export()
+        }); break;
+
+    }
     wx.navigateTo({
       url: e.currentTarget.dataset.href + "/" + e.currentTarget.dataset.href,
     })

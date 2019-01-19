@@ -9,20 +9,20 @@
     <view class='userAvatar'>
       <image src='{{ userInfo.avatarUrl }}' class='userAvatarImg'></image>
     </view>
-    <view class='userOption published' data-href="published"  bindtap='goto'>
+    <view class='userOption published'  animation="{{animationData1}}" data-href="published"  bindtap='goto'>
       <image src='/image/icon/published.png' class='optionImg'></image>
       <image src='/image/icon/published_font.png' class='optionText'></image>
     </view>
-    <view class='userOption trading' data-href="trading"  bindtap='goto'>
+    <view class='userOption trading'  animation="{{animationData2}}" data-href="trading"  bindtap='goto'>
       <image src='/image/icon/trading.png' class='optionImg' style='height:45%'></image>
       <image src='/image/icon/trading_font.png' class='optionText'></image>
     </view>
-    <view class='userOption sold' data-href="sold"  bindtap='goto'>
+    <view class='userOption sold'  animation="{{animationData3}}" data-href="sold"  bindtap='goto'>
       <image src='/image/icon/sold.png' class='optionImg'></image>
       <image src='/image/icon/sold_font.png' class='optionText'></image>
 
     </view>
-    <view class='userOption received' data-href="received"  bindtap='goto'>
+    <view class='userOption received'  animation="{{animationData4}}" data-href="received"  bindtap='goto'>
       <image src='/image/icon/received.png' class='optionImg' style='height:45%'></image>
       <image src='/image/icon/received_font.png' class='optionText'></image>
 
