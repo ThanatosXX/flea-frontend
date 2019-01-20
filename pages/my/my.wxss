@@ -18,7 +18,7 @@
   width: 150rpx;
   height: 150rpx;
   border-radius: 50%;
-  box-shadow: 0 10rpx  rgb(230, 107, 25);
+  box-shadow: 0 10rpx  rgb(199, 141, 53);
   background-color: #eee;
   position: absolute;
 }
