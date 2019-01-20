@@ -28,17 +28,15 @@
 
     </view>
   </view>
-  <view class='userItem '>
-    <image src='/image/my_rec.png' class='userItemImg'></image>
-  </view>
-  <view class='userItem '>
-    <image src='/image/my_rec.png' class='userItemImg'></image>
-  </view>
-  <view class='userItem '>
-    <image src='/image/my_rec.png' class='userItemImg'></image>
-  </view>
-  <view class='userItem '>
-    <image src='/image/my_rec.png' class='userItemImg'></image>
-  </view>
+
+<i-cell-group>
+    <i-cell title="只显示箭头" is-link></i-cell>
+    <i-cell title="只显示箭头" is-link></i-cell>
+    <i-cell title="只显示箭头" is-link></i-cell>
+    <i-cell title="只显示箭头" is-link></i-cell>
+</i-cell-group>
+
+
+
 </view>
 
