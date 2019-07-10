@@ -1,0 +1,177 @@
+page, view {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+page {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.cards-container {
+    display: flex;
+    flex-direction: column;
+    width: 95%;
+    height: 100%;
+    overflow-y:  auto;
+}
+
+.card-row:nth-last-child(2) {
+    margin-bottom: 20px;
+}
+
+.card-row {
+    display: flex;
+    align-items: stretch;
+    width: 100%;
+    height: 360rpx;
+    margin-top: 20px;
+}
+
+.card-col {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    width: 50%;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    width: 90%;
+    background-color: #fff;
+    box-shadow: 0 1px 6px rgba(32, 33, 36, 0.28);
+    border-radius: 8px;
+    border-bottom: 1px hidden #fff;
+    overflow: hidden;
+}
+
+.card-placeholder{
+    background-color: transparent;
+    width: 90%;
+}
+
+.card-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+.card-img>image{
+    max-width: 100%;
+    max-height: 100%;
+    width: 320rpx;
+    height: 240rpx;
+}
+
+.card-message {
+    display: flex;
+    flex-direction: column;
+    flex: 20;
+}
+
+.goods-details {
+    display: flex;
+    flex-direction: column;
+    height: 2.5em;
+    margin-top: 20rpx;
+}
+
+.goods-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    font-size: 16px;
+    padding-left: 5px;
+}
+
+.goods-title>view {
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.goods-price {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    min-width: 4em;
+    font-size: 14px;
+}
+.goods-price>view{
+    padding-left: 6px;
+    color: red;
+}
+.user-details{
+    display: flex;
+}
+.user-avater{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 40px;
+}
+.user-avater>image{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    overflow: hidden;
+    background-color: rebeccapurple;
+}
+.user-name{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.user-name>view{
+    max-width: 5em;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+
+.no-goods-mark{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.loading-footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100rpx;
+    width: 100%;
+    margin-top: 50rpx;
+}
+.loading-icon{
+    width: 40rpx;
+    height: 40rpx;
+    animation: loading 1000ms linear infinite;
+}
+@keyframes loading{
+    from {}
+    to {transform: rotate(360deg);}
+}
+.loading-tips{
+    margin-left: 10rpx;
+}

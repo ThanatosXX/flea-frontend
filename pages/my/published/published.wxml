@@ -1,2 +1,48 @@
-<!--pages/my/published/published.wxml-->
-<text>pages/my/published/published.wxml</text>
+<view style='text-align: center; margin-top:40%;' wx:if="{{!goods_list.length}}">
+    <text>暂无物品</text>
+</view>
+<view class='container'>
+    <scroll-view scroll-y class='cards-container'>
+        <block wx:for='{{goods_list}}' wx:key='index'>
+            <view class='card-row'>
+                <view class='card-col'>
+                    <view class='card' data-id='{{item.id}}' catchtap='goToDetail'>
+                        <view class='goods-message'>
+                            <view class='card-img' wx:if="{{item.ifHaveImage}}">
+                                <image src='{{item.image[0]}}'></image>
+                            </view>
+                            <view class='card-img' wx:if="{{!item.ifHaveImage}}">
+                                <image src='/image/timg.jpg'></image>
+                            </view>
+                            <view class='card-message'>
+                                <view class='goods-details'>
+                                    <view class='goods-title'>
+                                        <view>{{item.title}}</view>
+                                    </view>
+                                </view>
+                            </view>
+                        </view>
+                        <view class='button-area'>
+                            <!-- <view class='goods-price'>
+                                <text>￥{{item.price}}</text>
+                            </view> -->
+                            <view wx:if="{{item.ifHaveCustomer}}" class='publish-time'>
+                                <text>有人想要交换</text>
+                            </view>
+                            <view class='publish-time'>
+                                <text>发布时间\n</text>
+                                <text>{{item.createTime}}</text>
+                            </view>
+                            <view class='button1'>
+                                <button data-id='{{item.id}}' catchtap='goToEdit'>修改</button>
+                            </view>
+                            <view class='button2'>
+                                <button data-id='{{item.id}}' catchtap='deleteGoods'>删除</button>
+                            </view>
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </block>
+    </scroll-view>
+</view>

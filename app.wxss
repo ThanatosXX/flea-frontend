@@ -1,15 +1,24 @@
-.tabbar {
-    position: absolute;
-    bottom: 0;
-    width: 750rpx;
-}
-
 page {
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
     background-color: #f8f8f9;
+    color: #303133;
 }
 
 ::-webkit-scrollbar {
     width: 0;
     height: 0;
     color: transparent;
+}
+
+/*字体颜色*/
+.normal{
+    color: #606266;
+}
+.info{
+    color: #909399;
+}
+.holder{
+    color: #C0C4CC;
 }

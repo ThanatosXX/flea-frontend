@@ -1,0 +1,27 @@
+<view class='container'>
+    <view class='container-title'>
+        <text>发布我的物品</text>
+    </view>
+    <view class='title'>
+        <input bindinput="inputTitle" class="textarea-bg" placeholder="在此输入我的物品名称哟" auto-height />
+    </view>
+    <view class='price'>
+        <input bindinput="inputPrice" class="textarea-bg" placeholder="在此输入交换物哟" auto-height />
+    </view>
+    <view class='introduce'>
+        <textarea bindinput="inputInformation" maxlength='200' placeholder="在此添加详细内容(200字以内)" placeholder-class='placeholder-class-box' />
+    </view>
+    <view class='images'>
+        <image src='{{defaultImg}}' bindtap="bindChooseType"></image>
+        <image src='{{defaultImg1}}' bindtap="bindChooseType1"></image>
+        <image src='{{defaultImg2}}' bindtap="bindChooseType2"></image>
+    </view>
+    <view class="icon-group">
+        <block wx:for="{{iconType}}" wx:key="{{index}}">
+            <icon type="{{item}}" class='icon-item' bindtap="cancelChoose" data-id='{{index}}' size="15" />
+        </block>
+    </view>
+    <view class='submit'>
+        <button bindtap='publish' class="sub">发布</button>
+    </view>
+</view>

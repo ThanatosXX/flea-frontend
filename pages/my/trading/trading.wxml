@@ -1,2 +1,44 @@
-<!--pages/my/trading/trading.wxml-->
-<text>pages/my/trading/trading.wxml</text>
+<view style='text-align: center; margin-top:40%;' wx:if="{{!goods_list.length}}">
+    <text>暂无物品</text>
+</view>
+<view class='container'>
+    <scroll-view scroll-y class='cards-container'>
+        <block wx:for='{{goods_list}}' wx:key='index'>
+            <view class='card-row'>
+                <view class='card-col'>
+                    <view class='card' data-id='{{item.id}}' data-type='{{item.type}}' catchtap='goToDetail'>
+                        <view class='goods-message'>
+                            <view class='card-img' wx:if="{{item.ifHaveImage}}">
+                                <image src='{{item.image[0]}}'></image>
+                            </view>
+                            <view class='card-img' wx:if="{{!item.ifHaveImage}}">
+                                <image src='/image/timg.jpg'></image>
+                            </view>
+                            <view class='card-message'>
+                                <view class='goods-details'>
+                                    <view class='goods-title'>
+                                        <view>{{item.title}}</view>
+                                    </view>
+                                </view>
+                            </view>
+                        </view>
+                        <view class='button-area'>
+                            <!-- <view class='goods-price'>
+                                <text>￥{{item.price}}</text>
+                            </view> -->
+                            <text wx:if='{{!item.type}}'>我发布的</text>
+                            <text wx:if='{{item.type}}'>我想要的</text>
+                            <view class='button1'>
+                                <button data-id='{{item.id}}' catchtap='goToFinish' wx:if='{{!item.type}}'>完成交换</button>
+                                <button data-id='{{item.id}}' catchtap='remindSolder' wx:if='{{item.type}}'>提醒发布者</button>
+                            </view>
+                            <view class='button2'>
+                                <button data-id='{{item.id}}' catchtap='deleteTrading'>取消交换</button>
+                            </view>
+                        </view>
+                    </view>
+                </view>
+            </view>
+        </block>
+    </scroll-view>
+</view>

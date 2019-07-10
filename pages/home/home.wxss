@@ -19,6 +19,16 @@ page {
     overflow-x: hidden;
     overflow-y: auto;
 }
+.title-img {
+    width: 100%;
+    text-align: center;
+    height:200rpx;
+}
+.title-img image {
+    margin-top: 80rpx;
+    width: 352.8rpx;
+    height: 60rpx;
+}
 
 .cards-container {
     display: flex;
@@ -28,7 +38,7 @@ page {
     overflow-y:  auto;
 }
 
-.card-row:last-child {
+.card-row:nth-last-child(2) {
     margin-bottom: 20px;
 }
 
@@ -36,7 +46,7 @@ page {
     display: flex;
     align-items: stretch;
     width: 100%;
-    height: 230px;
+    height: 320rpx;
     margin-top: 20px;
 }
 
@@ -59,28 +69,35 @@ page {
     overflow: hidden;
 }
 
+.card-placeholder{
+    background-color: transparent;
+    width: 90%;
+}
+
 .card-img {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex: 65;
     overflow: hidden;
 }
 .card-img>image{
     max-width: 100%;
     max-height: 100%;
+    width: 320rpx;
+    height: 240rpx;
 }
 
 .card-message {
     display: flex;
     flex-direction: column;
-    flex: 35;
+    flex: 20;
 }
 
 .goods-details {
     display: flex;
     flex-direction: column;
     height: 2.5em;
+    margin-top: 20rpx;
 }
 
 .goods-title {
@@ -101,13 +118,13 @@ page {
 
 .goods-price {
     display: flex;
-    justify-content: flex-end;
+    justify-content: flex-start;
     align-items: center;
     min-width: 4em;
     font-size: 14px;
 }
 .goods-price>view{
-    padding-right: 6px;
+    padding-left: 6px;
     color: red;
 }
 .user-details{
@@ -137,4 +154,34 @@ page {
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
+}
+
+
+.no-goods-mark{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.loading-footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100rpx;
+    width: 100%;
+    margin-top: 50rpx;
+}
+.loading-icon{
+    width: 40rpx;
+    height: 40rpx;
+    animation: loading 1000ms linear infinite;
+}
+@keyframes loading{
+    from {}
+    to {transform: rotate(360deg);}
+}
+.loading-tips{
+    margin-left: 10rpx;
 }

@@ -128,6 +128,7 @@ Component({
                     spacing.pageX = spacing.pageX  < 0 ? - this.data.limitMove : this.data.limitMove;
                 }else{
                     spacing.pageX = 0;
+                    
                 }
                 this.setData({
                     'position' : spacing

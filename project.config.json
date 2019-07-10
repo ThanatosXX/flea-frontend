@@ -4,7 +4,7 @@
 		"ignore": []
 	},
 	"setting": {
-		"urlCheck": false,
+		"urlCheck": true,
 		"es6": true,
 		"postcss": true,
 		"minified": true,
@@ -13,12 +13,14 @@
 	},
 	"compileType": "miniprogram",
 	"libVersion": "2.4.0",
-	"appid": "wx6202d9a3d9c5faa8",
-	"projectname": "%E4%BF%A1%E6%81%AF%E6%95%B4%E5%90%88",
+	"appid": "wx5ddf6209beb0c35a",
+	"projectname": "%E5%9B%A2%E5%AD%90%E5%B0%8F%E7%AB%99",
 	"debugOptions": {
 		"hidedInDevtools": []
 	},
 	"isGameTourist": false,
+	"simulatorType": "wechat",
+	"simulatorPluginLibVersion": {},
 	"condition": {
 		"search": {
 			"current": -1,

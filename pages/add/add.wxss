@@ -1,0 +1,86 @@
+.container {
+    min-height: 100vh;
+    width: 100%;
+}
+
+.container-title {
+    text-align: center;
+    margin-top: 20rpx;
+}
+
+.title {
+    margin-top: 20rpx;
+}
+
+.title input {
+    margin-left: 5%;
+    margin-right: 5%;
+    border: 1px solid lightgrey;
+    padding: 10rpx;
+    border-radius: 10rpx;
+}
+
+.price {
+    margin-top: 40rpx;
+    text-align: center;
+}
+
+.price input {
+    margin-left: 20%;
+    margin-right: 20%;
+    border: 1px solid orange;
+    padding: 10rpx;
+    border-radius: 10rpx;
+}
+
+.introduce {
+    width: 90%;
+    margin-top: 40rpx;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.introduce textarea {
+    min-height: 35vh;
+    width: 98%;
+    border: 1px solid lightgrey;
+    padding-top: 10rpx;
+    padding-bottom: 10rpx;
+    padding-left: 1%;
+    padding-right: 1%;
+    border-radius: 10rpx;
+}
+
+.images {
+    display: flex;
+    margin-left: 5%;
+    margin-right: 5%;
+    margin-top: 30rpx;
+}
+
+.images image {
+    width: 320rpx;
+    height: 168.84rpx;
+}
+
+.icon-group {
+    margin-top: 5rpx;
+    text-align: center;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.icon-item {
+    width: 33.3%;
+}
+
+.submit {
+    text-align: center;
+    margin-top: 20rpx;
+}
+
+.submit button {
+    width: 320rpx;
+    color: white;
+    background-color: #E6A23C;
+}

@@ -1,0 +1,7 @@
+<!--pages/first/first.wxml-->
+<view class='container'>
+    <image src='/image/first.png'></image>
+    <view class='button-box'>
+        <view class='view-button' catchtap='onToHome'></view>
+    </view>
+</view>

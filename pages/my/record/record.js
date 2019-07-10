@@ -1,0 +1,49 @@
+// pages/my/record/record.js
+const re = require('../../../utils/request.js')
+const config = require('../../../config.js');
+Page({
+
+    /**
+     * 页面的初始数据
+     */
+    data: {
+
+    },
+
+    /**
+     * 生命周期函数--监听页面加载
+     */
+    onLoad: function (options) {
+        let that = this
+        re.request({
+            url: config.urls.getOrder,
+            data: {},
+            method: 'POST',
+            header: {
+                'content-type': 'application/x-www-form-urlencoded'
+            },
+            success: res => {
+                console.log(res)
+                //that.globalData.openid = res.data.openid
+                if (res.data.status) {
+                    console.log(res.data)
+                    that.setData({
+                        msg_list: res.data.msg_list
+                    })
+                } else {
+                    wx.showToast({
+                        title: '服务器繁忙，请稍后再试',
+                        icon: 'none'
+                    })
+                }
+            },
+            fail: res => {
+                console.log(res)
+                wx.showToast({
+                    title: '网络繁忙，请稍后再试',
+                    icon: 'none'
+                })
+            }
+        })
+    },
+})

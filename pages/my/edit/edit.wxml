@@ -1,0 +1,20 @@
+<view class="page centerPage-wrap" id="goodsCenterPage" data-router="goodsCenterPage">
+    <view class="centerPage-goods-info">
+        <view class="centerPage-info-item" >
+            <label>物品标题</label>
+            <label class="ico-moon icon-rightarrow"></label>
+            <input class="title" bindinput="inputTitle" placeholder="请输入物品标题" value="{{title}}"/>
+        </view>
+        <view class="centerPage-info-item" >
+            <label>交换物</label>
+            <label class="ico-moon icon-rightarrow"></label>
+            <input class="price" bindinput="inputPrice" placeholder="请输入交换物" value="{{price}}"/>
+        </view>
+        <view class="goodsInformation">
+            <label>物品详情</label>
+            <label class="ico-moon icon-rightarrow"></label>
+            <textarea class="information" bindinput="inputInformation" auto-focus='false' value="{{content}}"/>
+        </view>
+    </view>
+</view>
+<view class="centerPage-save-btn" bindtap="saveGoodsInfo">保存</view>

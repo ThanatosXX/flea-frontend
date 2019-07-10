@@ -1,2 +1,22 @@
-<!--pages/my/received/received.wxml-->
-<text>pages/my/received/received.wxml</text>
+<view style='text-align: center; margin-top:40%;' wx:if="{{!goods_list.length}}">
+    <text>暂无物品</text>
+</view>
+<view class='container'>
+    <scroll-view scroll-y class='cards-container'>
+        <view wx:for='{{goods_list}}' wx:key='index'>
+            <view class='cards' data-id='{{item.id}}' catchtap='goToDetail'>
+                <view class='info'>
+                    <view class='info-title'>
+                        <text>{{item.title}}</text>
+                    </view>
+                    <!-- <view class='info-price'>
+                        <text>￥{{item.price}}</text>
+                    </view> -->
+                </view>
+                <view class='time'>
+                    <text>完成时间： {{item.finished_time}}</text>
+                </view>
+            </view>
+        </view>
+    </scroll-view>
+</view>

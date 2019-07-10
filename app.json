@@ -1,50 +1,53 @@
 {
-
   "pages": [
+    "pages/first/first",
+    "pages/home/home",
     "pages/my/my",
+    "pages/add/add",
+    "pages/detail/detail",
     "pages/my/published/published",
     "pages/my/received/received",
     "pages/my/sold/sold",
     "pages/my/trading/trading",
-    "pages/category/category",
-    "pages/home/home",
-    "pages/messgage/messgage"
+    "pages/my/bind/bind",
+    "pages/my/edit/edit",
+    "pages/my/record/record",
+    "pages/my/audit/audit",
+    "pages/my/collect/collect",
+    "pages/add/upload/upload",
+    "pages/add/upload/upload1",
+    "pages/add/upload/upload2"
   ],
-    
-    "window": {
-        "backgroundTextStyle": "light",
-        "navigationBarBackgroundColor": "#E6A23C",
-        "navigationBarTitleText": "跳蚤市场",
-        "navigationBarTextStyle": "white"
-    },
-    "tabBar": {
-        "list": [
-            {
-                "pagePath": "pages/home/home",
-                "text": "首页",
-                "iconPath": "/image/icon/home.png",
-                "selectedIconPath": "/image/icon/home_fill.png"
-            },
-            {
-                "pagePath": "pages/category/category",
-                "text": "分类",
-                "iconPath": "/image/icon/category.png",
-                "selectedIconPath": "/image/icon/category_fill.png"
-            },
-            {
-                "pagePath": "pages/messgage/messgage",
-                "text": "消息",
-                "iconPath": "/image/icon/message.png",
-                "selectedIconPath": "/image/icon/message_fill.png"
-            },
-            {
-                "pagePath": "pages/my/my",
-                "text": "我的",
-                "iconPath": "/image/icon/my.png",
-                "selectedIconPath": "/image/icon/my_fill.png"
-            }
-        ],
-        "color": "#E6A23C",
-        "selectedColor": "#E6A23C"
-    }
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#E6A23C",
+    "navigationBarTitleText": "团子小站",
+    "navigationBarTextStyle": "white",
+    "enablePullDownRefresh": true
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/home/home",
+        "text": "首页",
+        "iconPath": "/image/icon/home.png",
+        "selectedIconPath": "/image/icon/home_fill.png"
+      },
+      {
+        "pagePath": "pages/add/add",
+        "text": "发布",
+        "iconPath": "/image/icon/add.png",
+        "selectedIconPath": "/image/icon/add.png"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "text": "我的",
+        "iconPath": "/image/icon/my.png",
+        "selectedIconPath": "/image/icon/my_fill.png"
+      }
+    ],
+    "color": "#E6A23C",
+    "selectedColor": "#E6A23C"
+  },
+  "sitemapLocation": "sitemap.json"
 }

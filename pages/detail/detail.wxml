@@ -1,0 +1,121 @@
+<!--pages/home/detail/detail.wxml-->
+<!-- banner -->
+<view class="container1">
+    <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+        <block wx:for="{{imgUrls}}" wx:key="{{index}}">
+            <swiper-item>
+                <image src="{{item}}" data-src="{{item}}" bindtap="previewImage"></image>
+            </swiper-item>
+        </block>
+    </swiper>
+    <scroll-view scroll-y="true">
+        <view class="detail">
+            <text class="title">{{res_data.goods_info.title}}</text>
+            <text class="price">{{res_data.goods_info.price}}</text>
+            <view class="divLine"></view>
+            <view>
+                <text>物品详情\n</text>
+                <text>{{res_data.goods_info.content}}</text>
+            </view>
+        </view>
+        <view class="host" wx:if="{{isIndex}}">
+            <!-- <block> -->
+            <image src='/image/icon/my.png' class="img"></image>
+            <text class="detail">发布者:  {{res_data.host_info.name}}</text>
+
+            <view class='copyContact' >
+                <text>联系方式:  </text>
+                <view catchtap='copyContact' class='copyContactBox' data-name='host_info'>
+                    <text>一键复制</text>
+                </view>
+            </view>
+            <text class="detail">{{res_data.host_info.contact}}</text>
+            <!-- </block> -->
+        </view>
+
+        <view class="buyer" wx:if="{{isSeller}}">
+            <view wx:if='{{HaveCustomer}}' class='buyer-title'>
+                <text>接受者列表</text>
+            </view>
+            <text wx:if='{{!HaveCustomer}}' class='buyer-title'>暂无接受者</text>
+            <view class='buyer-block' wx:for-items="{{res_data.customer_list}}" wx:key="name">
+                <view class='buyer-info'>
+                    <image src='/image/icon/my.png' class="img"></image>
+                    <text class="detail">接受者昵称： {{item.name}}</text>
+                    <view class='copyContact'>
+                        <text>联系方式:  </text>
+                        <view catchtap='copyContact' class='copyContactBox'  data-name='customer_list' data-id='{{item.id}}'>
+                            <text>一键复制</text>
+                        </view>
+                    </view>
+                    <text class="detail">{{item.contact}}</text>
+                </view>
+                <button catchtap='beginTrading' data-id='{{item.id}}'>
+                    <view class="trade">开始交换</view>
+                </button>
+            </view>
+        </view>
+        <view class="trading_buyer" wx:if="{{isTrading_buyer}}">
+            <text style='text-align: center;'>发布者信息</text>
+            <image src='/image/icon/my.png' class="img"></image>
+            <text class="detail">发布者姓名： {{res_data.host.name}}</text>
+            <view class='copyContact'> 
+                    <text>联系方式:  </text> 
+                    <view catchtap='copyContact' class='copyContactBox' data-name='host'>
+                        <text>一键复制</text>
+                    </view>
+                </view>
+            <text class="detail">{{res_data.host.contact}}</text>
+
+        </view>
+        <view class="trading_seller" wx:if="{{isTrading_seller}}">
+            <text style='text-align: center;'>接受者信息</text>
+            <image src='/image/icon/my.png' class="img"></image>
+            <text class="detail">接受者姓名： {{res_data.customer.name}}</text>
+            <view class='copyContact'> 
+                    <text>联系方式:  </text> 
+                    <view catchtap='copyContact' class='copyContactBox' data-name='customer'>
+                        <text>一键复制</text>
+                    </view>
+                </view>
+            <text class="detail">{{res_data.customer.contact}}</text>
+        </view>
+        <view class="buyed" wx:if="{{isBuyed}}">
+            <text style='text-align: center;'>发布者信息</text>
+            <image src='/image/icon/my.png' class="img"></image>
+            <text class="detail">发布者姓名： {{res_data.host.name}}</text>
+            <view class='copyContact'> 
+                    <text>联系方式:  </text> 
+                    <view catchtap='copyContact' class='copyContactBox' data-name='host'>
+                        <text>一键复制</text>
+                    </view>
+                </view>
+            <text class="detail">{{res_data.host.contact}}</text>
+        </view>
+        <view class="sold" wx:if="{{isSold}}">
+            <text style='text-align: center;'>接受者信息</text>
+            <image src='/image/icon/my.png' class="img"></image>
+            <text class="detail">接受者姓名： {{res_data.customer.name}}</text>
+            <view class='copyContact'> 
+                    <text>联系方式:  </text> 
+                    <view catchtap='copyContact' class='copyContactBox' data-name='customer'>
+                        <text>一键复制</text>
+                    </view>
+                </view>
+            <text class="detail">{{res_data.customer.contact}}</text>
+        </view>
+        <view class="separate"></view>
+        <block wx:for-items="{{detailImg}}" wx:key="name">
+            <image class="image_detail" src="{{item}}" />
+        </block>
+        <view class="temp"></view>
+    </scroll-view>
+    <!-- 底部悬浮栏 -->
+    <view class="detail-nav" wx:if="{{isIndex}}">
+        <view class="line_nav"></view>
+        <button wx:if="{{!isLike}}" class="button-green" bindtap="addLike" formType="submit">加入收藏</button>
+        <button wx:if="{{isLike}}" class="button-grey" formType="submit">已收藏</button>
+        <button wx:if="{{!isBuy}}" class="button-red" bindtap="immeBuy" formType="submit">我想要</button>
+        <button wx:if="{{isBuy}}" class="button-red" bindtap="buyAgain" formType="submit">已交换</button>
+    </view>
+</view>

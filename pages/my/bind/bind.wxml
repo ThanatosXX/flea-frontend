@@ -1,0 +1,89 @@
+<scroll-view class="page centerPage-wrap" id="userCenterPage" data-router="userCenterPage" scroll-y="true">
+    <view class="centerPage-user-info">
+        <form bindsubmit="formSubmit" bindreset="formReset">
+            <view class="centerPage-info-item">
+                <label>昵称</label>
+                <label class="ico-moon icon-rightarrow"></label>
+                <input class="nickname" placeholder="请输入您的昵称" bindinput="userNameInput" />
+            </view>
+            <view class="centerPage-info-item">
+                <label>学号</label>
+                <label class="ico-moon icon-rightarrow"></label>
+                <input class="userid" placeholder="请输入您的学号" bindinput="userIDInput" />
+            </view>
+            <view class="centerPage-info-item">
+                <label>信息门户密码</label>
+                <label class="ico-moon icon-rightarrow"></label>
+                <input class="password" placeholder="请输入您的密码" bindinput="usernumInput" type="password" />
+            </view>
+            <view class="centerPage-info-item">
+                <label>联系方式</label>
+                <label class="ico-moon icon-rightarrow"></label>
+                <input class="contact" placeholder="请输入您的联系方式" bindinput="userContactInput" />
+                
+            </view>
+            <view class='centerPage-info-item'>
+              <radio-group class="radio-group" bindchange="radioChange">
+                    <label class="radio" wx:for="{{items}}" wx:key="{{index}}">
+                        <radio value="{{item.name}}" checked="{{item.checked}}" />{{item.value}} </label>
+                </radio-group>
+            </view>
+            <view class="centerPage-info-item">
+              <radio class="agree_radio" bindtap='radioClick' checked="{{radioCheck}}"/>{{agree}}
+            </view>
+
+
+  <view class='menu-po'>
+        <view class='menu'>
+            <view class='menu-list'>
+            <view class='menu-nav' wx:for="{{ msgList }}" wx:for-index="idx" wx:key="key" data-hi="{{ idx }}"            bindtap="menuClick">
+                    <text class='menu-text'>{{ item.name }}</text>
+                 
+                </view>
+  
+            </view>
+        </view>
+   
+        <view class='menu-if'>
+            <view class="meun-txt" hidden='{{ isShows1}}'>
+<view class="td-2" selectable="true" scroll-y="true" >     
+      <text class="th-text" disabled='true'  style="overflow-y:auto;overflow-x:scroll;" selectable="true">免责声明
+“团子小站”小程序为中南大学在校学生及教职工提供二手物品交换平台，平台上的信息均由用户等第三方发布。我方会对物品发布进行审核，但是我方并不能保证已发布信息的真实性等问题，用户对小程序的使用行为必须自行承担相应风险。
+本声明所有解释权归升华工作室所有
+团子小站公约
+1.	保证个人身份信息以及发布物品信息真实。
+2.	遵守国家法律法规，不得发布违规信息以及进行欺诈等活动。
+3.	遵循平等原则，闲置资源公平享有流通的权利。
+升华工作室
+2019年5月27日
+</text>
+ </view>
+
+            </view>
+            <view class="meun-txt" hidden='{{ isShows2}}'>
+                <text class="th-text" disabled='true'  style="overflow-y:auto;overflow-x:scroll;" selectable="true">使用说明
+                在这里，你可以浏览琳琅满目的物品,并对喜爱的物品进行收藏或者交换。
+点击“我想要”之后可在“我的页面"交换记录中可看到物品的交换进度，同时在发布者界面，该物品底下会有其他用户想要交换的消息提示，等待发布者确认即可完成交换。
+当然，用户也可以直接通过“物品详情”中的联系方式直接联系发布者哦！
+只需输入想要交换的物品标题、交换物、详情即可完成物品发布，有无图片均可。
+图片最多三张，且发布之后不可进行修改。
+成功发布物品之后，用户可在“我的页面”里的“已发布”菜单中查看是否有人想要交换，当物品上方出现相关提示时，点开即可看到想要交换该物品的用户信息。
+点击“开始交换”的按钮即可进行相关交换，此时该物品会在首页中同步下架。
+发布者也可对自己正在交换的物品进行修改或者删除。
+由发布者点击“完成交换”或“取消交换”，“完成交换”后的物品进入完成状态，“取消交换”后的物品回到发布状态。
+接受者也可点击“提醒发布者”和“取消交换”。
+如果您在使用过程中出现任何系统问题或想提出任何建议，都可以直接与小团子进行联系，我们会在第一时间为您提供最优质的服务！
+                </text>
+            </view>
+        </view>
+
+
+
+    </view>
+
+            <view class='submit-box'>
+                <button formType="submit" catchtap='submitBtn'>提交</button>
+            </view>
+        </form>
+    </view>
+</scroll-view>

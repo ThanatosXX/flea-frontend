@@ -1,0 +1,54 @@
+/* pages/my/record/record.wxss */
+page, view {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+page {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.cards {
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 40rpx;
+    padding-bottom: 40rpx;
+    width: 100%;
+    border-bottom: 2rpx  solid lightgrey;
+}
+
+.info {
+    display: flex;
+    width: 100%;
+    font-size: 36rpx;
+}
+
+.info-title {
+    color: black;
+    width: 60%;
+    overflow-x: hidden;
+}
+
+.info-price {
+    color: red;
+    display: flex;
+    justify-content: flex-end;
+    width: 40%;
+}
+
+.time {
+    font-size:24rpx;
+}

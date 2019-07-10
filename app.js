@@ -1,35 +1,47 @@
 App({
+    currentPage: null,
 
-  /**
-   * 当小程序初始化完成时，会触发 onLaunch（全局只触发一次）
-   */
-  onLaunch: function () {
-    // wx.getSetting({
-    //   success: function(res){
-    //     wx.setStorageSync("authorize", res.authSetting)
-    //   }
-    // })
-    
-  },
+    onLaunch: function () {
+        let userInfo = wx.getStorageSync('userInfo');
+        this.setGlobalData({
+            userInfo: userInfo,
+            is_login: userInfo?true:false,
+            imgs: '../../image/defaultImg.png',
+            imgs1: '../../image/defaultImg.png',
+            imgs2: '../../image/defaultImg.png',
+            upload_imgs: [
+                '','',''
+            ]
+        })
+        wx.getStorage({
+            key: 'is_bind',
+            success: function(res) {
+                if(!res.data){
+                    wx.setStorageSync('is_bind', false)
+                }
+            },
+            fail: function(res){
+                wx.setStorageSync('is_bind', false)
+            }
+        })
+    },
+    globalData: {},
 
-  /**
-   * 当小程序启动，或从后台进入前台显示，会触发 onShow
-   */
-  onShow: function (options) {
-    
-  },
-
-  /**
-   * 当小程序从前台进入后台，会触发 onHide
-   */
-  onHide: function () {
-    
-  },
-
-  /**
-   * 当小程序发生脚本错误，或者 api 调用失败时，会触发 onError 并带上错误信息
-   */
-  onError: function (msg) {
-    
-  }
+    //如果某个页面要使用全局数据的话，必须在onlaod里调用这个函数
+    //这样在每次setGlobalData之后会自动将数据同步到对应页面的data
+    //参数就是this
+    bindPage: function(page){
+        page.setData(this.globalData);
+        this.currentPage = page;
+    },
+    //用法同setData
+    //每次调用后都会引起页面重新渲染
+    setGlobalData: function(data){
+        Object.keys(data).forEach(key=>{
+            this.globalData[key] = data[key];
+        });
+        if(this.currentPage !== null){
+            this.currentPage.setData(data);
+        }
+    }
 })

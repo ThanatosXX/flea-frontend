@@ -1,0 +1,40 @@
+<view class='container'>
+    <scroll-view wx:if="{{goods_list.length>0}}" scroll-y class='cards-container'>
+        <block wx:for='{{goods_list}}' wx:key='index' wx:for-item="row">
+            <view class='card-row'>
+                <view class='card-col' wx:for="{{row}}" wx:for-item="good" wx:key="index">
+                    <view catchtap='goToDetail' data-id='{{good.id}}' wx:if="{{good.id>0}}" class='card'>
+                        <view class='card-img' wx:if="{{good.ifHaveImage}}">
+                            <image src='{{good.image[0]}}'></image>
+                        </view>
+                        <view class='card-img' wx:if="{{!good.ifHaveImage}}">
+                            <image src='/image/timg.jpg'></image>
+                        </view>
+                        <view class='card-message'>
+                            <view class='goods-details'>
+                                <view class='goods-title'>
+                                    <view>{{good.title}}</view>
+                                </view>
+                                <!-- <view class='goods-price'>
+                                    <view>￥{{good.price}}</view>
+                                </view> -->
+                            </view>
+                            <!-- <view class='user-details'>
+                                <view class='user-avater'>
+                                    <image src='/image/icon/my.png'></image>
+                                </view>
+                                <view class='user-name'>
+                                    <view>这里是用户名</view>
+                                </view>
+                            </view> -->
+                        </view>
+                    </view>
+                    <view wx:else class='card-placeholder'></view>
+                </view>
+            </view>
+        </block>
+    </scroll-view>
+    <view wx:else catchtap='getGoodList' class='no-goods-mark'>
+        暂无物品 点击页面刷新
+    </view>
+</view>

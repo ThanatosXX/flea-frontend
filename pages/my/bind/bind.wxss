@@ -1,0 +1,164 @@
+page {
+    background-color: #eee;
+  }
+
+  .centerPage-wrap .centerPage-user-info {
+    padding-left: 3%;
+    padding-right: 3%;
+    margin-bottom:0%; 
+    border-top: 1px solid #d8d8d8;
+    border-bottom: 1px solid #d8d8d8;
+    margin-top: 15px;
+    list-style: none;
+    line-height: 40px;
+    text-indent: 10px;
+    background-color: #fff;
+  }
+  .centerPage-wrap.contact .centerPage-user-info {
+    display: none;
+  }
+  .centerPage-wrap .centerPage-user-info view {
+    position: relative;
+    border-bottom: 1px solid #ededed;
+  }
+  .centerPage-wrap .centerPage-user-info view:last-child {
+    border-bottom: none;
+    padding-left: -100rpx;
+  }
+  
+  .centerPage-info-item {
+    height: 80rpx;
+    line-height: 80rpx;
+  }
+  .centerPage-wrap .nickname,
+  .centerPage-wrap .userid,
+  .centerPage-wrap .contact,
+  .centerPage-wrap .password,
+  
+  
+  .centerPage-wrap .icon-rightarrow {
+    position: absolute;
+    right: 4px;
+    top: 50%;
+    margin-top: -10px;
+    width: 200px;
+    height: 20px;
+    line-height: 20px;
+    font-size: 14px;
+    color: #999;
+  }
+  .centerPage-wrap .shadow-content {
+    width: 80%;
+    left: 4%;
+    top: 50%;
+    margin-top: -150px;
+    padding: 3% 2%;
+    background-color: #fff;
+    font-size: 14px;
+  }
+  .centerPage-wrap .shadow-content view {
+    line-height: 30px;
+    text-indent: 10px;
+  }
+  .centerPage-wrap .shadow-content .title {
+    font-size: 18px;
+    
+    border-bottom: 2px solid #bcbcbc;
+  }
+  
+  
+  .submit-box {
+    margin: 120rpx 70rpx 50rpx;
+    bottom: 0;
+    position: fixed;
+  
+    height:90rpx;
+    line-height:90rpx;
+
+    border-radius: 2px;
+    text-align: center;
+  }
+
+  .agree_radio{
+    margin-left:20rpx; 
+  }
+  radio-group{
+  display: flex;
+  align-items: center;
+}
+ radio-group .radio{
+  margin-left: 15rpx;
+}
+ radio-group radio{
+  margin-left: 10rpx;
+}
+
+
+
+
+.menu-po{
+    position: relative;
+    left: 0;
+    top: 20rpx;
+    right: 0;
+    bottom: 50rpx;
+    height: 400rpx;
+}
+.menu{
+    background-color: #fff;
+   
+}
+.menu-list{
+    display: flex;
+    justify-content: space-between;
+    height: 70rpx;
+}
+.menu-nav{
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu-nav text{
+    color: #696969;
+    font-size: 14px;
+
+}
+
+
+
+.menu-if{
+    background-color: #ffffff;
+    box-sizing: border-box;
+    position: absolute;
+    top: 92rpx;
+    left: 0;
+    z-index: 9;
+    width: 100%;
+}
+.meun-txt{
+    height: auto;
+    color: #696969;
+    
+}
+
+
+
+/* over/auto
+.over-auto{
+    height: 550rpx;
+    overflow: auto;
+} */
+
+
+
+.th-text {
+  width: 100%;
+  justify-content: center;
+  color: #000;
+  display: block;
+  height: 300rpx;
+  align-items: center;
+  max-height: 300rpx;
+}

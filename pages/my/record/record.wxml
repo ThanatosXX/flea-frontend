@@ -1,0 +1,20 @@
+<!--pages/my/record/record.wxml-->
+<view style='text-align: center; margin-top:40%;' wx:if="{{!msg_list.length}}">
+    <text>暂无记录</text>
+</view>
+<view class='container'>
+    <scroll-view scroll-y class='cards-container'>
+        <view wx:for='{{msg_list}}' wx:key='index'>
+            <view class='cards'>
+                <view class='info'>
+                    <view class='info-title'>
+                        <text>{{item.msg}}</text>
+                    </view>
+                    <view class='info-price'>
+                        <text>{{item.time}}</text>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </scroll-view>
+</view>
